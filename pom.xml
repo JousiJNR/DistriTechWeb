@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.distritech</groupId>
+    <artifactId>DistriTechWeb</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>DistriTechWeb-1.0-SNAPSHOT</name>
+    
+    <properties>
+    <jakartaee.version>10.0.0</jakartaee.version> <!-- O la versión que estés usando -->
+        <maven.compiler.release>17</maven.compiler.release>
+    </properties>
+<dependencies>
+      <!-- Dependencia para Servlets -->
+  <dependency>
+    <groupId>jakarta.servlet</groupId>
+    <artifactId>jakarta.servlet-api</artifactId>
+    <version>6.0.0</version>
+    <scope>provided</scope>
+  </dependency>
+
+  <!-- Dependencia para JAX-RS -->
+  <dependency>
+    <groupId>jakarta.ws.rs</groupId>
+    <artifactId>jakarta.ws.rs-api</artifactId>
+    <version>3.1.0</version>
+    <scope>provided</scope>
+  </dependency>
+
+</dependencies>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.13.0</version>
+            <configuration>
+                <release>17</release>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.2</version>
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+</project>
